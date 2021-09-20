@@ -1,0 +1,553 @@
+# ./nvdla_runtime --loadable lenet/lenet-int8.nvdla   --image Image/five.pgm    
+  --rawdump
+creating new runtime context...
+Emulator starting
+pgm2dimg 1 28 28 1 128 0 3584
+(DLA_TEST) Error 0x00000004: Mismatched channel: 1 != 4 (in TestUtils.cpp, function createImageCopy(), line 160)
+submitting tasks...
+[ 2506.694696] Enter:dla_read_network_config
+[ 2506.694950] Exit:dla_read_network_config status=0
+[ 2506.695134] Enter: dla_initiate_processors
+[ 2506.695315] Enter: dla_submit_operation
+[ 2506.696733] Prepare Convolution operation index 0 ROI 0 dep_count 1
+[ 2506.696983] Enter: dla_prepare_operation
+[ 2506.697216] processor:Convolution group:0, rdma_group:0 available
+[ 2506.697440] Enter: dla_read_config
+[ 2506.697682] Exit: dla_read_config
+[ 2506.697901] Exit: dla_prepare_operation status=0
+[ 2506.698165] Enter: dla_program_operation
+[ 2506.698395] Program Convolution operation index 0 ROI 0 Group[0]
+[ 2506.702172] no desc get due to index==-1
+[ 2506.702458] no desc get due to index==-1
+[ 2506.702628] no desc get due to index==-1
+[ 2506.702792] no desc get due to index==-1
+[ 2506.702980] no desc get due to index==-1
+[ 2506.703138] Enter: dla_op_programmed
+[ 2506.703290] Update dependency operation index 3 ROI 0 DEP_COUNT=3
+[ 2506.705179] Update dependency operation index 1 ROI 0 DEP_COUNT=1
+[ 2506.705445] enable SDP in dla_update_dependency as depdency are resolved
+[ 2506.705676] Enter: dla_enable_operation
+[ 2506.705830] exit dla_enable_operation without actual enable due to processor hasn't been programmed
+[ 2506.706120] Exit: dla_enable_operation status=0
+[ 2506.706282] Exit: dla_op_programmed
+[ 2506.706414] Exit: dla_program_operation status=0
+[ 2506.706578] Exit: dla_submit_operation
+[ 2506.706719] Enter: dla_dequeue_operation
+[ 2506.706866] Dequeue op from Convolution processor, index=3 ROI=0
+[ 2506.707067] Enter: dla_submit_operation
+[ 2506.707231] Prepare Convolution operation index 3 ROI 0 dep_count 2
+[ 2506.709363] Enter: dla_prepare_operation
+[ 2506.709631] processor:Convolution group:1, rdma_group:0 available
+[ 2506.709854] Enter: dla_read_config
+[ 2506.710095] Exit: dla_read_config
+[ 2506.710253] Exit: dla_prepare_operation status=0
+[ 2506.710430] Enter: dla_program_operation
+[ 2506.710580] Program Convolution operation index 3 ROI 0 Group[1]
+[ 2506.713740] no desc get due to index==-1
+[ 2506.714120] no desc get due to index==-1
+[ 2506.714289] no desc get due to index==-1
+[ 2506.714440] no desc get due to index==-1
+[ 2506.714581] no desc get due to index==-1
+[ 2506.714719] Enter: dla_op_programmed
+[ 2506.714873] Update dependency operation index 6 ROI 0 DEP_COUNT=3
+[ 2506.715093] Update dependency operation index 4 ROI 0 DEP_COUNT=2
+[ 2506.715303] Exit: dla_op_programmed
+[ 2506.716910] Exit: dla_program_operation status=0
+[ 2506.717110] Exit: dla_submit_operation
+[ 2506.717249] Exit: dla_dequeue_operation
+[ 2506.717387] Enter: dla_submit_operation
+[ 2506.717530] Prepare SDP operation index 1 ROI 0 dep_count 0
+[ 2506.717752] Enter: dla_prepare_operation
+[ 2506.718069] processor:SDP group:0, rdma_group:0 available
+[ 2506.718261] Enter: dla_read_config
+[ 2506.718499] Exit: dla_read_config
+[ 2506.718628] Exit: dla_prepare_operation status=0
+[ 2506.718796] Enter: dla_program_operation
+[ 2506.718940] Program SDP operation index 1 ROI 0 Group[0]
+[ 2506.721872] no desc get due to index==-1
+[ 2506.722072] no desc get due to index==-1
+[ 2506.722307] no desc get due to index==-1
+[ 2506.722531] no desc get due to index==-1
+[ 2506.722761] Enter: dla_op_programmed
+[ 2506.722982] Update dependency operation index 4 ROI 0 DEP_COUNT=1
+[ 2506.723333] enable SDP in dla_update_dependency as depdency are resolved
+[ 2506.725539] Enter: dla_enable_operation
+[ 2506.725736] exit dla_enable_operation without actual enable due to processor hasn't been programmed
+[ 2506.726036] Exit: dla_enable_operation status=0
+[ 2506.726204] Exit: dla_op_programmed
+[ 2506.726331] Exit: dla_program_operation status=0
+[ 2506.726482] Enter: dla_enable_operation
+[ 2506.726627] Enable SDP operation index 1 ROI 0
+[ 2506.726942] Enter: dla_op_enabled
+[ 2506.727071] Update dependency operation index 0 ROI 0 DEP_COUNT=1
+[ 2506.727268] enable Convolution in dla_update_dependency as depdency are resolved
+[ 2506.729125] Enter: dla_enable_operation
+[ 2506.729297] Enable Convolution operation index 0 ROI 0
+[ 2506.730209] Enter: dla_op_enabled
+[ 2506.730328] Exit: dla_op_enabled
+[ 2506.730447] Exit: dla_enable_operation status=0
+[ 2506.730602] Exit: dla_op_enabled
+[ 2506.730727] Exit: dla_enable_operation status=0
+[ 2506.730882] Exit: dla_submit_operation
+[ 2506.731021] Enter: dla_dequeue_operation
+[ 2506.731165] Dequeue op from SDP processor, index=4 ROI=0
+[ 2506.731348] Enter: dla_submit_operation
+[ 2506.732970] Prepare SDP operation index 4 ROI 0 dep_count 0
+[ 2506.733183] Enter: dla_prepare_operation
+[ 2506.736951] processor:SDP group:1, rdma_group:1 available
+[ 2506.738307] Enter: dla_read_config
+[ 2506.738595] Exit: dla_read_config
+[ 2506.738755] Exit: dla_prepare_operation status=0
+[ 2506.738949] Enter: dla_program_operation
+[ 2506.739122] Program SDP operation index 4 ROI 0 Group[1]
+[ 2506.742693] no desc get due to index==-1
+[ 2506.742897] no desc get due to index==-1
+[ 2506.743098] no desc get due to index==-1
+[ 2506.743261] no desc get due to index==-1
+[ 2506.744833] Enter: dla_op_programmed
+[ 2506.745061] Update dependency operation index 7 ROI 0 DEP_COUNT=2
+[ 2506.745309] Exit: dla_op_programmed
+[ 2506.745470] Exit: dla_program_operation status=0
+[ 2506.745666] Enter: dla_enable_operation
+[ 2506.745837] Enable SDP operation index 4 ROI 0
+[ 2506.746413] Enter: dla_op_enabled
+[ 2506.746572] Update dependency operation index 3 ROI 0 DEP_COUNT=2
+[ 2506.746808] Exit: dla_op_enabled
+[ 2506.746957] Exit: dla_enable_operation status=0
+[ 2506.747197] Exit: dla_submit_operation
+[ 2506.747375] Exit: dla_dequeue_operation
+[ 2506.749650] Enter: dla_submit_operation
+[ 2506.749830] Prepare PDP operation index 2 ROI 0 dep_count 1
+[ 2506.750021] Enter: dla_prepare_operation
+[ 2506.750621] processor:PDP group:0, rdma_group:0 available
+[ 2506.750844] Enter: dla_read_config
+[ 2506.751120] Exit: dla_read_config
+[ 2506.751270] Exit: dla_prepare_operation status=0
+[ 2506.752825] Enter: dla_program_operation
+[ 2506.753003] Program PDP operation index 2 ROI 0 Group[0]
+[ 2506.753182] group id 0 rdma id 0
+[ 2506.757362] no desc get due to index==-1
+[ 2506.757663] no desc get due to index==-1
+[ 2506.757831] no desc get due to index==-1
+[ 2506.758040] no desc get due to index==-1
+[ 2506.758263] no desc get due to index==-1
+[ 2506.758450] Enter: dla_op_programmed
+[ 2506.758586] Update dependency operation index 5 ROI 0 DEP_COUNT=2
+[ 2506.758787] Exit: dla_op_programmed
+[ 2506.758921] Exit: dla_program_operation status=0
+[ 2506.759089] Exit: dla_submit_operation
+[ 2506.759236] Enter: dla_dequeue_operation
+[ 2506.759385] Dequeue op from PDP processor, index=5 ROI=0
+[ 2506.761632] Enter: dla_submit_operation
+[ 2506.761861] Prepare PDP operation index 5 ROI 0 dep_count 1
+[ 2506.762085] Enter: dla_prepare_operation
+[ 2506.762509] processor:PDP group:1, rdma_group:1 available
+[ 2506.762732] Enter: dla_read_config
+[ 2506.762989] Exit: dla_read_config
+[ 2506.763126] Exit: dla_prepare_operation status=0
+[ 2506.763290] Enter: dla_program_operation
+[ 2506.764745] Program PDP operation index 5 ROI 0 Group[1]
+[ 2506.764968] group id 1 rdma id 1
+[ 2506.767435] no desc get due to index==-1
+[ 2506.768590] no desc get due to index==-1
+[ 2506.768769] no desc get due to index==-1
+[ 2506.768945] no desc get due to index==-1
+[ 2506.769093] no desc get due to index==-1
+[ 2506.769302] no desc get due to index==-1
+[ 2506.769455] Enter: dla_op_programmed
+[ 2506.769595] Exit: dla_op_programmed
+[ 2506.769733] Exit: dla_program_operation status=0
+[ 2506.769933] Exit: dla_submit_operation
+[ 2506.770107] Exit: dla_dequeue_operation
+[ 2506.770259] Exit: dla_initiate_processors status=0
+[ 2506.815230] Enter:dla_handle_events, processor:BDMA
+[ 2506.815533] Exit:dla_handle_events, ret:0
+[ 2506.815731] Enter:dla_handle_events, processor:Convolution
+[ 2506.815958] Handle cdma weight done event, processor Convolution group 0
+[ 2506.816266] Exit:dla_handle_events, ret:0
+[ 2506.816460] Enter:dla_handle_events, processor:SDP
+[ 2506.816662] Exit:dla_handle_events, ret:0
+[ 2506.816878] Enter:dla_handle_events, processor:PDP
+[ 2506.817091] Exit:dla_handle_events, ret:0
+[ 2506.817270] Enter:dla_handle_events, processor:CDP
+[ 2506.817470] Exit:dla_handle_events, ret:0
+[ 2506.817656] Enter:dla_handle_events, processor:RUBIK
+[ 2506.817889] Exit:dla_handle_events, ret:0
+[ 2506.840835] Enter:dla_handle_events, processor:BDMA
+[ 2506.841141] Exit:dla_handle_events, ret:0
+[ 2506.841322] Enter:dla_handle_events, processor:Convolution
+[ 2506.841516] Handle cdma data done event, processor Convolution group 0
+[ 2506.841734] Exit:dla_handle_events, ret:0
+[ 2506.841916] Enter:dla_handle_events, processor:SDP
+[ 2506.842097] Exit:dla_handle_events, ret:0
+[ 2506.842280] Enter:dla_handle_events, processor:PDP
+[ 2506.842488] Exit:dla_handle_events, ret:0
+[ 2506.842664] Enter:dla_handle_events, processor:CDP
+[ 2506.842887] Exit:dla_handle_events, ret:0
+[ 2506.843067] Enter:dla_handle_events, processor:RUBIK
+[ 2506.843284] Exit:dla_handle_events, ret:0
+[ 2516.100468] Enter:dla_handle_events, processor:BDMA
+[ 2516.100858] Exit:dla_handle_events, ret:0
+[ 2516.101120] Enter:dla_handle_events, processor:Convolution
+[ 2516.101335] Handle op complete event, processor Convolution group 0
+[ 2516.101559] Enter:dla_op_completion processor Convolution group0
+[ 2516.101837] Completed Convolution operation index 0 ROI 0
+[ 2516.102101] 1 HWLs done, totally 10 layers
+[ 2516.102316] Enter: dla_dequeue_operation
+[ 2516.102480] Dequeue op from Convolution processor, index=6 ROI=0
+[ 2516.102724] Enter: dla_submit_operation
+[ 2516.102902] Prepare Convolution operation index 6 ROI 0 dep_count 2
+[ 2516.103178] Enter: dla_prepare_operation
+[ 2516.103453] processor:Convolution group:0, rdma_group:0 available
+[ 2516.103724] Enter: dla_read_config
+[ 2516.104012] Exit: dla_read_config
+[ 2516.104193] Exit: dla_prepare_operation status=0
+[ 2516.104408] Enter: dla_program_operation
+[ 2516.104594] Program Convolution operation index 6 ROI 0 Group[0]
+[ 2516.106079] no desc get due to index==-1
+[ 2516.106293] no desc get due to index==-1
+[ 2516.106471] no desc get due to index==-1
+[ 2516.106659] no desc get due to index==-1
+[ 2516.106846] no desc get due to index==-1
+[ 2516.107041] Enter: dla_op_programmed
+[ 2516.107217] Update dependency operation index 8 ROI 0 DEP_COUNT=3
+[ 2516.107481] Update dependency operation index 7 ROI 0 DEP_COUNT=1
+[ 2516.107765] enable SDP in dla_update_dependency as depdency are resolved
+[ 2516.108047] Enter: dla_enable_operation
+[ 2516.108236] exit dla_enable_operation without actual enable due to processor hasn't been programmed
+[ 2516.108631] Exit: dla_enable_operation status=0
+[ 2516.108843] Exit: dla_op_programmed
+[ 2516.109018] Exit: dla_program_operation status=0
+[ 2516.109206] Exit: dla_submit_operation
+[ 2516.109384] Exit: dla_dequeue_operation
+[ 2516.109579] Exit:dla_op_completion processor Convolution group0 status=0
+[ 2516.109873] Exit:dla_handle_events, ret:0
+[ 2516.110056] Enter:dla_handle_events, processor:SDP
+[ 2516.110278] Handle op complete event, processor SDP group 0
+[ 2516.110519] Enter:dla_op_completion processor SDP group0
+[ 2516.110727] Completed SDP operation index 1 ROI 0
+[ 2516.110896] Update dependency operation index 2 ROI 0 DEP_COUNT=1
+[ 2516.111092] enable PDP in dla_update_dependency as depdency are resolved
+[ 2516.111304] Enter: dla_enable_operation
+[ 2516.111455] Enable PDP operation index 2 ROI 0
+[ 2516.111656] group id 0 rdma id 0
+[ 2516.111913] rdma needed 1
+[ 2516.112101] Enter: dla_op_enabled
+[ 2516.112238] Exit: dla_op_enabled
+[ 2516.112372] Exit: dla_enable_operation status=0
+[ 2516.112544] 2 HWLs done, totally 10 layers
+[ 2516.112729] Enter: dla_free_op_desc op desc index 0 ROI 0
+[ 2516.112979] Exit: dla_free_op_desc
+[ 2516.113146] Enter: dla_dequeue_operation
+[ 2516.113303] Dequeue op from SDP processor, index=7 ROI=0
+[ 2516.113540] Enter: dla_submit_operation
+[ 2516.113733] Prepare SDP operation index 7 ROI 0 dep_count 0
+[ 2516.113971] Enter: dla_prepare_operation
+[ 2516.123047] processor:SDP group:0, rdma_group:0 available
+[ 2516.123290] Enter: dla_read_config
+[ 2516.123549] Exit: dla_read_config
+[ 2516.123703] Exit: dla_prepare_operation status=0
+[ 2516.123894] Enter: dla_program_operation
+[ 2516.124050] Program SDP operation index 7 ROI 0 Group[0]
+[ 2516.127490] no desc get due to index==-1
+[ 2516.127821] no desc get due to index==-1
+[ 2516.128079] no desc get due to index==-1
+[ 2516.128292] no desc get due to index==-1
+[ 2516.128493] Enter: dla_op_programmed
+[ 2516.128650] Update dependency operation index 9 ROI 0 DEP_COUNT=2
+[ 2516.128869] Exit: dla_op_programmed
+[ 2516.129021] Exit: dla_program_operation status=0
+[ 2516.129198] Enter: dla_enable_operation
+[ 2516.129354] Enable SDP operation index 7 ROI 0
+[ 2516.129939] Enter: dla_op_enabled
+[ 2516.130106] Update dependency operation index 6 ROI 0 DEP_COUNT=2
+[ 2516.130358] Exit: dla_op_enabled
+[ 2516.130510] Exit: dla_enable_operation status=0
+[ 2516.130719] Exit: dla_submit_operation
+[ 2516.130901] Exit: dla_dequeue_operation
+[ 2516.131118] Enter: dla_free_op_desc op desc index 1 ROI 0
+[ 2516.131391] Exit: dla_free_op_desc
+[ 2516.131538] Exit:dla_op_completion processor SDP group0 status=0
+[ 2516.131768] Exit:dla_handle_events, ret:0
+[ 2516.131922] Enter:dla_handle_events, processor:PDP
+[ 2516.132102] Exit:dla_handle_events, ret:0
+[ 2516.132260] Enter:dla_handle_events, processor:CDP
+[ 2516.132460] Exit:dla_handle_events, ret:0
+[ 2516.132620] Enter:dla_handle_events, processor:RUBIK
+[ 2516.132802] Exit:dla_handle_events, ret:0
+[ 2516.387172] Enter:dla_handle_events, processor:BDMA
+[ 2516.387472] Exit:dla_handle_events, ret:0
+[ 2516.387628] Enter:dla_handle_events, processor:Convolution
+[ 2516.387829] Exit:dla_handle_events, ret:0
+[ 2516.387962] Enter:dla_handle_events, processor:SDP
+[ 2516.388123] Exit:dla_handle_events, ret:0
+[ 2516.388260] Enter:dla_handle_events, processor:PDP
+[ 2516.388452] Handle op complete event, processor PDP group 0
+[ 2516.388632] Enter:dla_op_completion processor PDP group0
+[ 2516.388817] Completed PDP operation index 2 ROI 0
+[ 2516.389003] Update dependency operation index 3 ROI 0 DEP_COUNT=1
+[ 2516.389210] enable Convolution in dla_update_dependency as depdency are resolved
+[ 2516.389474] Enter: dla_enable_operation
+[ 2516.389627] Enable Convolution operation index 3 ROI 0
+[ 2516.390046] Enter: dla_op_enabled
+[ 2516.390175] Exit: dla_op_enabled
+[ 2516.390297] Exit: dla_enable_operation status=0
+[ 2516.390462] 3 HWLs done, totally 10 layers
+[ 2516.390629] Enter: dla_dequeue_operation
+[ 2516.390790] exit PDP as there's no further operation
+[ 2516.390982] Exit: dla_dequeue_operation
+[ 2516.391130] Enter: dla_free_op_desc op desc index 2 ROI 0
+[ 2516.391349] Exit: dla_free_op_desc
+[ 2516.391487] Exit:dla_op_completion processor PDP group0 status=0
+[ 2516.391696] Exit:dla_handle_events, ret:0
+[ 2516.391834] Enter:dla_handle_events, processor:CDP
+[ 2516.392003] Exit:dla_handle_events, ret:0
+[ 2516.392150] Enter:dla_handle_events, processor:RUBIK
+[ 2516.392322] Exit:dla_handle_events, ret:0
+[ 2516.566065] Enter:dla_handle_events, processor:BDMA
+[ 2516.566388] Exit:dla_handle_events, ret:0
+[ 2516.566590] Enter:dla_handle_events, processor:Convolution
+[ 2516.566833] Handle cdma data done event, processor Convolution group 1
+[ 2516.567119] Exit:dla_handle_events, ret:0
+[ 2516.567281] Enter:dla_handle_events, processor:SDP
+[ 2516.567504] Exit:dla_handle_events, ret:0
+[ 2516.567662] Enter:dla_handle_events, processor:PDP
+[ 2516.567827] Exit:dla_handle_events, ret:0
+[ 2516.567968] Enter:dla_handle_events, processor:CDP
+[ 2516.568161] Exit:dla_handle_events, ret:0
+[ 2516.568362] Enter:dla_handle_events, processor:RUBIK
+[ 2516.568575] Exit:dla_handle_events, ret:0
+[ 2528.933249] Enter:dla_handle_events, processor:BDMA
+[ 2528.933552] Exit:dla_handle_events, ret:0
+[ 2528.933779] Enter:dla_handle_events, processor:Convolution
+[ 2528.933971] Handle cdma weight done event, processor Convolution group 1
+[ 2528.934228] Handle op complete event, processor Convolution group 1
+[ 2528.934471] Enter:dla_op_completion processor Convolution group1
+[ 2528.934697] Completed Convolution operation index 3 ROI 0
+[ 2528.934926] 4 HWLs done, totally 10 layers
+[ 2528.935079] Enter: dla_dequeue_operation
+[ 2528.935244] Dequeue op from Convolution processor, index=8 ROI=0
+[ 2528.935536] Enter: dla_submit_operation
+[ 2528.935736] Prepare Convolution operation index 8 ROI 0 dep_count 2
+[ 2528.936069] Enter: dla_prepare_operation
+[ 2528.936316] processor:Convolution group:1, rdma_group:0 available
+[ 2528.936632] Enter: dla_read_config
+[ 2528.936946] Exit: dla_read_config
+[ 2528.937141] Exit: dla_prepare_operation status=0
+[ 2528.937302] Enter: dla_program_operation
+[ 2528.937449] Program Convolution operation index 8 ROI 0 Group[1]
+[ 2528.938972] no desc get due to index==-1
+[ 2528.939131] no desc get due to index==-1
+[ 2528.939281] no desc get due to index==-1
+[ 2528.939455] no desc get due to index==-1
+[ 2528.939629] no desc get due to index==-1
+[ 2528.939804] no desc get due to index==-1
+[ 2528.939978] Enter: dla_op_programmed
+[ 2528.940143] Update dependency operation index 9 ROI 0 DEP_COUNT=1
+[ 2528.940408] enable SDP in dla_update_dependency as depdency are resolved
+[ 2528.940677] Enter: dla_enable_operation
+[ 2528.940840] exit dla_enable_operation without actual enable due to processor hasn't been programmed
+[ 2528.941206] Exit: dla_enable_operation status=0
+[ 2528.941404] Exit: dla_op_programmed
+[ 2528.941567] Exit: dla_program_operation status=0
+[ 2528.941764] Exit: dla_submit_operation
+[ 2528.941927] Exit: dla_dequeue_operation
+[ 2528.942098] Exit:dla_op_completion processor Convolution group1 status=0
+[ 2528.942362] Exit:dla_handle_events, ret:0
+[ 2528.942540] Enter:dla_handle_events, processor:SDP
+[ 2528.942738] Handle op complete event, processor SDP group 1
+[ 2528.942968] Enter:dla_op_completion processor SDP group1
+[ 2528.943192] Completed SDP operation index 4 ROI 0
+[ 2528.943400] Update dependency operation index 5 ROI 0 DEP_COUNT=1
+[ 2528.943652] enable PDP in dla_update_dependency as depdency are resolved
+[ 2528.943918] Enter: dla_enable_operation
+[ 2528.944090] Enable PDP operation index 5 ROI 0
+[ 2528.944305] group id 1 rdma id 1
+[ 2528.944629] rdma needed 1
+[ 2528.944936] Enter: dla_op_enabled
+[ 2528.945157] Exit: dla_op_enabled
+[ 2528.945306] Exit: dla_enable_operation status=0
+[ 2528.945520] 5 HWLs done, totally 10 layers
+[ 2528.945706] Enter: dla_free_op_desc op desc index 3 ROI 0
+[ 2528.946003] Exit: dla_free_op_desc
+[ 2528.946215] Enter: dla_dequeue_operation
+[ 2528.946419] Dequeue op from SDP processor, index=9 ROI=0
+[ 2528.946692] Enter: dla_submit_operation
+[ 2528.946900] Prepare SDP operation index 9 ROI 0 dep_count 0
+[ 2528.947164] Enter: dla_prepare_operation
+[ 2528.950250] processor:SDP group:1, rdma_group:1 available
+[ 2528.950473] Enter: dla_read_config
+[ 2528.950696] Exit: dla_read_config
+[ 2528.950828] Exit: dla_prepare_operation status=0
+[ 2528.950983] Enter: dla_program_operation
+[ 2528.951157] Program SDP operation index 9 ROI 0 Group[1]
+[ 2528.954319] no desc get due to index==-1
+[ 2528.954506] no desc get due to index==-1
+[ 2528.954681] no desc get due to index==-1
+[ 2528.954854] no desc get due to index==-1
+[ 2528.955014] no desc get due to index==-1
+[ 2528.955177] no desc get due to index==-1
+[ 2528.955366] Enter: dla_op_programmed
+[ 2528.955535] Exit: dla_op_programmed
+[ 2528.955680] Exit: dla_program_operation status=0
+[ 2528.955887] Enter: dla_enable_operation
+[ 2528.956070] Enable SDP operation index 9 ROI 0
+[ 2528.956577] Enter: dla_op_enabled
+[ 2528.956766] Update dependency operation index 8 ROI 0 DEP_COUNT=2
+[ 2528.957048] Exit: dla_op_enabled
+[ 2528.957233] Exit: dla_enable_operation status=0
+[ 2528.957439] Exit: dla_submit_operation
+[ 2528.957615] Exit: dla_dequeue_operation
+[ 2528.957803] Enter: dla_free_op_desc op desc index 4 ROI 0
+[ 2528.958079] Exit: dla_free_op_desc
+[ 2528.958264] Exit:dla_op_completion processor SDP group1 status=0
+[ 2528.958522] Exit:dla_handle_events, ret:0
+[ 2528.958700] Enter:dla_handle_events, processor:PDP
+[ 2528.958868] Exit:dla_handle_events, ret:0
+[ 2528.959042] Enter:dla_handle_events, processor:CDP
+[ 2528.959256] Exit:dla_handle_events, ret:0
+[ 2528.959445] Enter:dla_handle_events, processor:RUBIK
+[ 2528.959666] Exit:dla_handle_events, ret:0
+[ 2529.085305] Enter:dla_handle_events, processor:BDMA
+[ 2529.085581] Exit:dla_handle_events, ret:0
+[ 2529.085768] Enter:dla_handle_events, processor:Convolution
+[ 2529.086006] Exit:dla_handle_events, ret:0
+[ 2529.086191] Enter:dla_handle_events, processor:SDP
+[ 2529.086414] Exit:dla_handle_events, ret:0
+[ 2529.086592] Enter:dla_handle_events, processor:PDP
+[ 2529.086799] Handle op complete event, processor PDP group 1
+[ 2529.086993] Enter:dla_op_completion processor PDP group1
+[ 2529.087181] Completed PDP operation index 5 ROI 0
+[ 2529.087357] Update dependency operation index 6 ROI 0 DEP_COUNT=1
+[ 2529.087644] enable Convolution in dla_update_dependency as depdency are resolved
+[ 2529.087965] Enter: dla_enable_operation
+[ 2529.088121] Enable Convolution operation index 6 ROI 0
+[ 2529.088592] Enter: dla_op_enabled
+[ 2529.088736] Exit: dla_op_enabled
+[ 2529.088866] Exit: dla_enable_operation status=0
+[ 2529.089038] 6 HWLs done, totally 10 layers
+[ 2529.089195] Enter: dla_dequeue_operation
+[ 2529.089346] exit PDP as there's no further operation
+[ 2529.089532] Exit: dla_dequeue_operation
+[ 2529.089682] Enter: dla_free_op_desc op desc index 5 ROI 0
+[ 2529.089924] Exit: dla_free_op_desc
+[ 2529.090063] Exit:dla_op_completion processor PDP group1 status=0
+[ 2529.090269] Exit:dla_handle_events, ret:0
+[ 2529.090432] Enter:dla_handle_events, processor:CDP
+[ 2529.090626] Exit:dla_handle_events, ret:0
+[ 2529.090806] Enter:dla_handle_events, processor:RUBIK
+[ 2529.091028] Exit:dla_handle_events, ret:0
+[ 2529.193142] Enter:dla_handle_events, processor:BDMA
+[ 2529.193426] Exit:dla_handle_events, ret:0
+[ 2529.193617] Enter:dla_handle_events, processor:Convolution
+[ 2529.193866] Handle cdma data done event, processor Convolution group 0
+[ 2529.194164] Exit:dla_handle_events, ret:0
+[ 2529.194362] Enter:dla_handle_events, processor:SDP
+[ 2529.194588] Exit:dla_handle_events, ret:0
+[ 2529.194771] Enter:dla_handle_events, processor:PDP
+[ 2529.194977] Exit:dla_handle_events, ret:0
+[ 2529.195167] Enter:dla_handle_events, processor:CDP
+[ 2529.195374] Exit:dla_handle_events, ret:0
+[ 2529.195672] Enter:dla_handle_events, processor:RUBIK
+[ 2529.195843] Exit:dla_handle_events, ret:0
+[ 2535.853483] Enter:dla_handle_events, processor:BDMA
+[ 2535.853779] Exit:dla_handle_events, ret:0
+[ 2535.853963] Enter:dla_handle_events, processor:Convolution
+[ 2535.854160] Handle cdma weight done event, processor Convolution group 0
+[ 2535.854409] Handle op complete event, processor Convolution group 0
+[ 2535.854655] Enter:dla_op_completion processor Convolution group0
+[ 2535.854894] Completed Convolution operation index 6 ROI 0
+[ 2535.855095] 7 HWLs done, totally 10 layers
+[ 2535.855245] Enter: dla_dequeue_operation
+[ 2535.855428] exit Convolution as there's no further operation
+[ 2535.855625] Exit: dla_dequeue_operation
+[ 2535.855770] Exit:dla_op_completion processor Convolution group0 status=0
+[ 2535.856009] Exit:dla_handle_events, ret:0
+[ 2535.856162] Enter:dla_handle_events, processor:SDP
+[ 2535.856325] Handle op complete event, processor SDP group 0
+[ 2535.856561] Enter:dla_op_completion processor SDP group0
+[ 2535.856768] Completed SDP operation index 7 ROI 0
+[ 2535.856933] Update dependency operation index 8 ROI 0 DEP_COUNT=1
+[ 2535.857138] enable Convolution in dla_update_dependency as depdency are resolved
+[ 2535.857390] Enter: dla_enable_operation
+[ 2535.857535] Enable Convolution operation index 8 ROI 0
+[ 2535.857953] Enter: dla_op_enabled
+[ 2535.858084] Exit: dla_op_enabled
+[ 2535.858209] Exit: dla_enable_operation status=0
+[ 2535.858373] 8 HWLs done, totally 10 layers
+[ 2535.858525] Enter: dla_free_op_desc op desc index 6 ROI 0
+[ 2535.858768] Exit: dla_free_op_desc
+[ 2535.858928] Enter: dla_dequeue_operation
+[ 2535.859119] exit SDP as there's no further operation
+[ 2535.859343] Exit: dla_dequeue_operation
+[ 2535.859525] Enter: dla_free_op_desc op desc index 7 ROI 0
+[ 2535.859849] Exit: dla_free_op_desc
+[ 2535.860068] Exit:dla_op_completion processor SDP group0 status=0
+[ 2535.860398] Exit:dla_handle_events, ret:0
+[ 2535.860606] Enter:dla_handle_events, processor:PDP
+[ 2535.860847] Exit:dla_handle_events, ret:0
+[ 2535.861055] Enter:dla_handle_events, processor:CDP
+[ 2535.861293] Exit:dla_handle_events, ret:0
+[ 2535.861500] Enter:dla_handle_events, processor:RUBIK
+[ 2535.861744] Exit:dla_handle_events, ret:0
+[ 2535.972544] Enter:dla_handle_events, processor:BDMA
+[ 2535.972817] Exit:dla_handle_events, ret:0
+[ 2535.972980] Enter:dla_handle_events, processor:Convolution
+[ 2535.973176] Handle cdma data done event, processor Convolution group 1
+[ 2535.973395] Exit:dla_handle_events, ret:0
+[ 2535.973542] Enter:dla_handle_events, processor:SDP
+[ 2535.973707] Exit:dla_handle_events, ret:0
+[ 2535.973857] Enter:dla_handle_events, processor:PDP
+[ 2535.974025] Exit:dla_handle_events, ret:0
+[ 2535.974169] Enter:dla_handle_events, processor:CDP
+[ 2535.974329] Exit:dla_handle_events, ret:0
+[ 2535.974474] Enter:dla_handle_events, processor:RUBIK
+[ 2535.974647] Exit:dla_handle_events, ret:0
+[ 2536.038982] Enter:dla_handle_events, processor:BDMA
+[ 2536.039241] Exit:dla_handle_events, ret:0
+[ 2536.039386] Enter:dla_handle_events, processor:Convolution
+[ 2536.039620] Handle cdma weight done event, processor Convolution group 1
+[ 2536.039850] Exit:dla_handle_events, ret:0
+[ 2536.040001] Enter:dla_handle_events, processor:SDP
+[ 2536.040172] Exit:dla_handle_events, ret:0
+[ 2536.040313] Enter:dla_handle_events, processor:PDP
+[ 2536.040492] Exit:dla_handle_events, ret:0
+[ 2536.040639] Enter:dla_handle_events, processor:CDP
+[ 2536.040805] Exit:dla_handle_events, ret:0
+[ 2536.040948] Enter:dla_handle_events, processor:RUBIK
+[ 2536.041119] Exit:dla_handle_events, ret:0
+[ 2536.053854] Enter:dla_handle_events, processor:BDMA
+[ 2536.054103] Exit:dla_handle_events, ret:0
+[ 2536.054262] Enter:dla_handle_events, processor:Convolution
+[ 2536.054457] Handle op complete event, processor Convolution group 1
+[ 2536.054674] Enter:dla_op_completion processor Convolution group1
+[ 2536.054927] Completed Convolution operation index 8 ROI 0
+[ 2536.055126] 9 HWLs done, totally 10 layers
+[ 2536.055281] Enter: dla_dequeue_operation
+[ 2536.055468] exit Convolution as there's no further operation
+[ 2536.055667] Exit: dla_dequeue_operation
+[ 2536.055811] Exit:dla_op_completion processor Convolution group1 status=0
+[ 2536.056035] Exit:dla_handle_events, ret:0
+[ 2536.056179] Enter:dla_handle_events, processor:SDP
+[ 2536.056359] Handle op complete event, processor SDP group 1
+[ 2536.056548] Enter:dla_op_completion processor SDP group1
+[ 2536.056780] Completed SDP operation index 9 ROI 0
+[ 2536.056942] 10 HWLs done, totally 10 layers
+[ 2536.057091] Enter: dla_free_op_desc op desc index 8 ROI 0
+[ 2536.057385] Exit: dla_free_op_desc
+[ 2536.057589] Enter: dla_free_op_desc op desc index 9 ROI 0
+[ 2536.057802] Exit: dla_free_op_desc
+[ 2536.057943] Exit:dla_op_completion processor SDP group1 status=0
+[ 2536.058145] Exit:dla_handle_events, ret:0
+[ 2536.058293] Enter:dla_handle_events, processor:PDP
+[ 2536.058452] Exit:dla_handle_events, ret:0
+[ 2536.058608] Enter:dla_handle_events, processor:CDP
+[ 2536.058769] Exit:dla_handle_events, ret:0
+[ 2536.058913] Enter:dla_handle_events, processor:RUBIK
+[ 2536.059086] Exit:dla_handle_events, ret:0
+[ 2536.063780] reset engine done
+Work Found!
+Work Done
+execution time = 29663725.000000 s
+Shutdown signal received, exiting
+Test pass
